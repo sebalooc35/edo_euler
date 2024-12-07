@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edo Euler</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs/lib/browser/math.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="title-container">
+                <h1 class="title">Edo Euler</h1>
+                <img src="images/logo.png" alt="Logo Galileo" class="logo">
+            </div>
+        </header>
+        <main>
+            <form class="input-form">
+                <div class="form-group">
+                    <label for="equation">Ecuación (dy/dx):</label>
+                    <input id="equation" type="text" placeholder="e.g., x + y" class="form-input" />
+                </div>
+                <div class="form-group">
+                    <label for="exactEquation">Solución exacta (y):</label>
+                    <input id="exactEquation" type="text" placeholder="e.g., x*x + 2" class="form-input" />
+                </div>
+                <div class="form-group">
+                    <label for="x0">x<sub>0</sub>:</label>
+                    <input id="x0" type="number" class="form-input" />
+                    <label for="y0">y<sub>0</sub>:</label>
+                    <input id="y0" type="number" class="form-input" />
+                </div>
+                <div class="form-group">
+                    <label for="h">Tamaño de Step (h):</label>
+                    <input id="h" type="number" step="0.01" class="form-input" />
+                    <label for="steps">Steps:</label>
+                    <input id="steps" type="number" class="form-input" />
+                </div>
+                <div class="form-group">
+                    <label for="method">Método:</label>
+                    <select id="method" class="form-input">
+                        <option value="euler">Euler</option>
+                        <option value="eulerImproved">Euler Mejorado</option>
+                    </select>
+                </div>
+                <button id="solve" type="button" class="btn">Solucionar</button>
+            </form>
+            <section id="output" class="output-section"></section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
